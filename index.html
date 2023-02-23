@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geometry Genius</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <header>
+      <!-- navbar -->
+      <nav class="navbar bg-body-secondary rounded mt-3">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold"
+            >Interactive <br />
+            <span class="fw-light">Geometry Genius</span>
+          </a>
+          <form class="d-flex" role="search">
+            <button class="btn btn-primary" id="add-blog" type="button">
+              Blog
+            </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <!-- main section started -->
+    <main class="my-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8 border-0">
+            <div class="row row-cols-1 row-cols-md-3 g-2">
+              <div class="col">
+                <div class="card text-center">
+                  <img src="images/triangle.png" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 id="triangle-title">Triangle</h5>
+                    <p class="card-text geo-formula-triangle">
+                      Area(A) = 0.5 x b x h
+                    </p>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <input
+                        id="input-b"
+                        type="text"
+                        class="input-field-b w-50"
+                        placeholder="b"
+                      />
+                      <p class="mt-2">cm</p>
+                      <input
+                        id="input-h"
+                        type="text"
+                        class="input-field-h w-50"
+                        placeholder="h"
+                      />
+                      <p class="mt-2">cm</p>
+                    </div>
+                    <button
+                      id="triangle-btn"
+                      class="btn btn-primary w-100 mt-2"
+                    >
+                      Calculate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card text-center">
+                  <img src="images/rectangle.png" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 id="rectangle-title">Rectangle</h5>
+                    <p class="card-text geo-formula-triangle">
+                      Area(A) = w x l
+                    </p>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <input
+                        id="rectangle-input1"
+                        type="text"
+                        class="input-field-b w-50"
+                        placeholder="w"
+                      />
+                      <p class="mt-2">cm</p>
+                      <input
+                        id="rectangle-input2"
+                        type="text"
+                        class="input-field-h w-50"
+                        placeholder="l"
+                      />
+                      <p class="mt-2">cm</p>
+                    </div>
+                    <button
+                      id="rectangle-btn"
+                      class="btn btn-primary w-100 mt-2"
+                    >
+                      Calculate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card text-center">
+                  <img src="images/parallelogram.png" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 id="parallelogram-title">Parallelogram</h5>
+                    <p class="card-text geo-formula-triangle">
+                      Area(A) = b x h
+                    </p>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <p>b =<span id="parallelogram-base">10</span>cm ,</p>
+                      <p>h=<span id="parallelogram-height">12</span>cm</p>
+                    </div>
+                    <button
+                      id="parallelogram-btn"
+                      class="btn btn-primary w-100 mt-2"
+                    >
+                      Calculate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card text-center">
+                  <img src="images/rhombus.png" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 id="rhombus-title">Rhombus</h5>
+                    <p class="card-text geo-formula-triangle">
+                      Area(A)=0.5xd1xd2
+                    </p>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <p>d1 =<span id="rhombus-d1">16</span>cm ,</p>
+                      <p>d2 =<span id="rhombus-d2">8</span>cm</p>
+                    </div>
+                    <button id="rhombus-btn" class="btn btn-primary w-100 mt-2">
+                      Calculate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card text-center">
+                  <img src="images/pentagon.png" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 id="pentagon-title">Pentagon</h5>
+                    <p class="card-text geo-formula-triangle">
+                      Area(A) = 0.5 x p x b
+                    </p>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <p>p =<span id="pentagon1">6</span>cm ,</p>
+                      <p>b =<span id="pentagon2">10</span>cm</p>
+                    </div>
+                    <button
+                      id="pentagon-btn"
+                      class="btn btn-primary w-100 mt-2"
+                    >
+                      Calculate
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card text-center">
+                  <img src="images/ellipse.png" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 id="ellipse-title">Ellipse</h5>
+                    <p class="card-text geo-formula-triangle">
+                      Area(A) =3.1416 ab
+                    </p>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <p>a =<span id="ellipse1">10</span>cm ,</p>
+                      <p>b =<span id="ellipse2">4</span>cm</p>
+                    </div>
+                    <button  id="ellipse-btn" class="btn btn-primary w-100 mt-2">
+                      Calculate
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center rounded border mt-4 mt-md-0 col-md-4">
+            <h3><u>Area calculator</u></h3>
+            <table style="width: 100%" id="container-for-append"></table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- js link -->
+    <script src="js/script.js"></script>
+
+    <!-- boostrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
